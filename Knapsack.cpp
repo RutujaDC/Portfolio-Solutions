@@ -25,23 +25,23 @@ int autoscaling(int budget)
 int main()
  {
     int budget, n;
-    cout << "Enter the maximum budget:";
-    cin >> budget;
-    cout << "Enter the number of instances:";
-    cin >> n;
+    cout<<"Enter the maximum budget:";
+    cin>>budget;
+    cout<<"Enter the number of instances:";
+    cin>>n;
     costs.resize(n);
     performance.resize(n);
-    cout <<"Enter the costs of the instances:";
+    cout<<"Enter the costs of the instances:";
     for (int i=0;i<n;i++)
     {
         cin>>costs[i];
     }
-    cout <<"Enter the performance values of the instances:";
+    cout<<"Enter the performance values of the instances:";
     for (int i=0;i<n;i++)
     {
-        cin >>performance[i];
+        cin>>performance[i];
     }
     int maxPerformance=autoscaling(budget);
-    cout <<"Maximum achievable performance within the budget:"<<maxPerformance<<endl;
+    cout<<"Maximum achievable performance within the budget:"<<maxPerformance<<endl;
     return 0;
 }
